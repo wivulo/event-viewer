@@ -4,6 +4,11 @@ import Counter from '@/components/Counter.vue'
 import Navbar from '@/components/Navbar.vue'
 import RegistrationForm from '@/components/Registration.vue'
 import AppLogo from '@/components/AppLogo.vue'
+import PlaneAroundTheWorld from '@/components/icons/PlaneAroundTheWorld.vue'
+import Venue from '@/components/icons/Venue.vue'
+import Restaurant from '@/components/icons/Restaurant.vue'
+import Hotel from '@/components/icons/Hotel.vue'
+
 import { useElementVisibility } from '@vueuse/core'
 
 export default {
@@ -11,7 +16,8 @@ export default {
   components: {
     AppLogo,
     Button, Counter, Navbar, 
-    RegistrationForm, 
+    RegistrationForm, PlaneAroundTheWorld,
+    Venue, Restaurant, Hotel
   },
   data(){
     return {
@@ -68,7 +74,61 @@ export default {
       </div>
     </div>
 
-    <div class="section" id="location"></div>
+    <div class="section bg-primary" id="location">
+      <div class="w-4/5 py-28 flex justify-between items-center">
+        <div class="flex gap-10">
+          <div class="location-block-container">
+            <div class="icon-container">
+              <i class="fa fa-map-location-dot icon"></i>
+            </div>
+            <div class="text">
+              <p>Venue</p>
+              <p>203 Fake St. Mountain View, 
+                San Francisco, California, USA
+              </p>
+            </div>
+          </div>
+
+          <div class="location-block-container">
+            <div class="icon-container">
+              <PlaneAroundTheWorld class="h-32 w-32 font-semibold -mt-10"/>
+            </div>
+            <div class="text">
+              <p>Transport</p>
+              <p>A small river named Duden flows by their 
+                place and supplies.
+              </p>
+            </div>
+          </div>
+
+          <div class="location-block-container">
+            <div class="icon-container">
+              <i class="fa fa-hotel icon"></i>
+            </div>
+            <div class="text">
+              <p>Hotel</p>
+              <p>
+                A small river named Duden flows by their 
+                place and supplies.
+              </p>
+            </div>
+          </div>
+
+          <div class="location-block-container">
+            <div>
+              <Hotel />
+            </div>
+            <div class="text">
+              <p>Restaurant</p>
+              <p>
+                A small river named Duden flows by their 
+                place and supplies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="section h-52" id="aboutus"></div>
 
@@ -91,5 +151,25 @@ export default {
 
 .section {
   @apply flex justify-center
+}
+
+.location-block-container{
+  @apply h-60 w-52 flex flex-col justify-between py-2
+}
+
+.location-block-container .icon-container{
+  @apply w-full flex items-center
+}
+
+.location-block-container .icon{
+  @apply text-6xl text-white
+}
+
+.location-block-container .text{
+  @apply text-white text-lg text-left
+}
+
+.location-block-container .text p:nth-child(1){
+  @apply text-2xl mb-3
 }
 </style>
