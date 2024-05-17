@@ -16,8 +16,9 @@ export default {
   components: {
     AppLogo,
     Button, Counter, Navbar, 
-    RegistrationForm, PlaneAroundTheWorld,
-    Venue, Restaurant, Hotel
+    RegistrationForm, 
+    
+    PlaneAroundTheWorld, Venue, Restaurant, Hotel
   },
   data(){
     return {
@@ -79,7 +80,7 @@ export default {
         <div class="flex gap-10">
           <div class="location-block-container">
             <div class="icon-container">
-              <i class="fa fa-map-location-dot icon"></i>
+              <Venue class="h-20  w-20 font-semibold  -ml-4" />
             </div>
             <div class="text">
               <p>Venue</p>
@@ -91,7 +92,7 @@ export default {
 
           <div class="location-block-container">
             <div class="icon-container">
-              <PlaneAroundTheWorld class="h-32 w-32 font-semibold -mt-10"/>
+              <PlaneAroundTheWorld class="h-32  w-32 font-semibold -mt-10"/>
             </div>
             <div class="text">
               <p>Transport</p>
@@ -103,7 +104,7 @@ export default {
 
           <div class="location-block-container">
             <div class="icon-container">
-              <i class="fa fa-hotel icon"></i>
+              <Hotel class="h-20  w-20 font-semibold " />
             </div>
             <div class="text">
               <p>Hotel</p>
@@ -116,7 +117,7 @@ export default {
 
           <div class="location-block-container">
             <div>
-              <Hotel />
+               <Restaurant class="h-20  w-20 font-semibold " />
             </div>
             <div class="text">
               <p>Restaurant</p>
