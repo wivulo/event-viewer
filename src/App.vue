@@ -16,6 +16,9 @@ export default {
     AppLogo,
     Button, Counter, Navbar, 
     RegistrationForm, PlaneAroundTheWorld,
+    RegistrationForm, 
+    
+    PlaneAroundTheWorld, Venue, Restaurant, Hotel
   },
   data(){
     return {
@@ -80,7 +83,7 @@ export default {
         <div class="flex gap-10 justify-center">
           <div class="location-block-container">
             <div class="icon-container">
-              <img :src="VenueIcon" alt="Venue" class="h-32 w-32"/>
+              <Venue class="h-20  w-20 font-semibold  -ml-4" />
             </div>
             <div class="text">
               <p>Venue</p>
@@ -91,8 +94,8 @@ export default {
           </div>
 
           <div class="location-block-container">
-            <div class="icon-container mt-9">
-              <PlaneAroundTheWorld class="h-32 w-32 font-semibold -mt-10"/>
+            <div class="icon-container">
+              <PlaneAroundTheWorld class="h-32  w-32 font-semibold -mt-10"/>
             </div>
             <div class="text">
               <p>Transport</p>
@@ -104,7 +107,7 @@ export default {
 
           <div class="location-block-container">
             <div class="icon-container">
-              <img :src="HotelIcon" alt="Hotel" class="h-32 w-32"/>
+              <Hotel class="h-20  w-20 font-semibold " />
             </div>
             <div class="text">
               <p>Hotel</p>
@@ -117,7 +120,7 @@ export default {
 
           <div class="location-block-container">
             <div>
-              <img :src="RestaurantIcon" alt="Hotel" class="h-32 w-32"/>
+               <Restaurant class="h-20  w-20 font-semibold " />
             </div>
             <div class="text">
               <p>Restaurant</p>
