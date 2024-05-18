@@ -5,10 +5,9 @@ import Navbar from '@/components/Navbar.vue'
 import RegistrationForm from '@/components/Registration.vue'
 import AppLogo from '@/components/AppLogo.vue'
 import PlaneAroundTheWorld from '@/components/icons/PlaneAroundTheWorld.vue'
-import Venue from '@/components/icons/Venue.vue'
-import Restaurant from '@/components/icons/Restaurant.vue'
-import Hotel from '@/components/icons/Hotel.vue'
-
+import Hotel from '@/assets/images/hotel-removebg-preview.png'
+import Restaurant from '@/assets/images/restaurant-removebg-preview.png'
+import Venue from '@/assets/images/venue-removebg-preview.png'
 import { useElementVisibility } from '@vueuse/core'
 
 export default {
@@ -17,11 +16,13 @@ export default {
     AppLogo,
     Button, Counter, Navbar, 
     RegistrationForm, PlaneAroundTheWorld,
-    Venue, Restaurant, Hotel
   },
   data(){
     return {
-      NavbarIsVisible: false
+      NavbarIsVisible: false,
+      HotelIcon: Hotel,
+      RestaurantIcon: Restaurant,
+      VenueIcon: Venue,
     }
   },
   mounted() {
@@ -75,11 +76,11 @@ export default {
     </div>
 
     <div class="section bg-primary" id="location">
-      <div class="w-4/5 py-28 flex justify-between items-center">
-        <div class="flex gap-10">
+      <div class="w-4/5 py-28 flex justify-center items-center">
+        <div class="flex gap-10 justify-center">
           <div class="location-block-container">
             <div class="icon-container">
-              <i class="fa fa-map-location-dot icon"></i>
+              <img :src="VenueIcon" alt="Venue" class="h-32 w-32"/>
             </div>
             <div class="text">
               <p>Venue</p>
@@ -90,7 +91,7 @@ export default {
           </div>
 
           <div class="location-block-container">
-            <div class="icon-container">
+            <div class="icon-container mt-9">
               <PlaneAroundTheWorld class="h-32 w-32 font-semibold -mt-10"/>
             </div>
             <div class="text">
@@ -103,7 +104,7 @@ export default {
 
           <div class="location-block-container">
             <div class="icon-container">
-              <i class="fa fa-hotel icon"></i>
+              <img :src="HotelIcon" alt="Hotel" class="h-32 w-32"/>
             </div>
             <div class="text">
               <p>Hotel</p>
@@ -116,7 +117,7 @@ export default {
 
           <div class="location-block-container">
             <div>
-              <Hotel />
+              <img :src="RestaurantIcon" alt="Hotel" class="h-32 w-32"/>
             </div>
             <div class="text">
               <p>Restaurant</p>
