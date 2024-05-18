@@ -5,9 +5,9 @@ import Navbar from '@/components/Navbar.vue'
 import RegistrationForm from '@/components/Registration.vue'
 import AppLogo from '@/components/AppLogo.vue'
 import PlaneAroundTheWorld from '@/components/icons/PlaneAroundTheWorld.vue'
-import Hotel from '@/assets/images/hotel-removebg-preview.png'
-import Restaurant from '@/assets/images/restaurant-removebg-preview.png'
-import Venue from '@/assets/images/venue-removebg-preview.png'
+import Venue from '@/components/icons/Venue.vue'
+import Restaurant from '@/components/icons/Restaurant.vue'
+import Hotel from '@/components/icons/Hotel.vue'
 import { useElementVisibility } from '@vueuse/core'
 
 export default {
@@ -15,7 +15,6 @@ export default {
   components: {
     AppLogo,
     Button, Counter, Navbar, 
-    RegistrationForm, PlaneAroundTheWorld,
     RegistrationForm, 
     
     PlaneAroundTheWorld, Venue, Restaurant, Hotel
